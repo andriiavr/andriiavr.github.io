@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "Andrii Avramenko",
   "license": "ISC",
-  "description": "Projects that made or contributed Andrii Avramenko",
+  "description": "Projects that made or contributed to Andrii Avramenko",
   "dependencies": {
     "lenis": "^1.3.18-dev.1",
     "modern-normalize": "^1.1.0"

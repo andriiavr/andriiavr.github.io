@@ -4,16 +4,16 @@
             "name": "Daily Forecast",
             "lastUpdated": "2026-09-04",
             "thumbnail": "/projects/daily_forecast.png",
-            "activePage": "https://andrii-avramenko.github.io/dailyForecast",
-            "sourceCode": "https://github.com/Andrii-Avramenko/dailyForecast",
+            "activePage": "https://andriiavr.github.io/dailyForecast",
+            "sourceCode": "https://github.com/andriiavr/dailyForecast",
             "tags": ["github"]
         },
         {
             "name": "Event Booster",
             "lastUpdated": "2026-02-12",
             "thumbnail": "/projects/event_booster.png",
-            "activePage": "https://andrii-avramenko.github.io/events-project",
-            "sourceCode": "https://github.com/Andrii-Avramenko/events-project",
+            "activePage": "https://andriiavr.github.io/events-project",
+            "sourceCode": "https://github.com/andriiavr/events-project",
             "tags": ["github"]
             
         },
@@ -21,34 +21,34 @@
             "name": "Coding Magic",
             "lastUpdated": "2025-08-19",
             "thumbnail": "/projects/coding_magic.png",
-            "activePage": "https://andrii-avramenko.github.io/coding-magic",
-            "sourceCode": "https://github.com/Andrii-Avramenko/coding-magic",
+            "activePage": "https://andriiavr.github.io/coding-magic",
+            "sourceCode": "https://github.com/andriiavr/coding-magic",
             "tags": ["github"]
         },
         {
             "name": "Ice Cream",
             "lastUpdated": "2025-02-25",
             "thumbnail": "/projects/ice_cream.png",
-            "activePage": "https://andrii-avramenko.github.io/ice-cream",
-            "sourceCode": "https://github.com/Andrii-Avramenko/ice-cream",
+            "activePage": "https://andriiavr.github.io/ice-cream",
+            "sourceCode": "https://github.com/andriiavr/ice-cream",
             "tags": ["github"]
         },
         {
             "name": "Web studio",
             "lastUpdated": "2025-03-06",
             "thumbnail": "/projects/webstudio.png",
-            "activePage": "https://andrii-avramenko.github.io/WebStudio-SCSS",
-            "sourceCode": "https://github.com/Andrii-Avramenko/WebStudio-SCSS",
+            "activePage": "https://andriiavr.github.io/WebStudio-SCSS",
+            "sourceCode": "https://github.com/andriiavr/WebStudio-SCSS",
             "tags": ["github"]
         },
         {
             "name": "York Parks",
             "lastUpdated": "2025-02-05",
             "thumbnail": "/projects/york_parks.png",
-            "activePage": "https://andrii-avramenko.github.io/york-parks",
-            "sourceCode": "https://github.com/Andrii-Avramenko/york-parks",
+            "activePage": "https://andriiavr.github.io/york-parks",
+            "sourceCode": "https://github.com/andriiavr/york-parks",
             "tags": ["github"]
         } 
     ],
-    "lastUpdated": "2026-09-23T21:18:48"
+    "lastUpdated": "2026-10-15T23:32:58"
 }
