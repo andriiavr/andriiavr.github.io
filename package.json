@@ -1,14 +1,14 @@
 {
   "name": "andriis-portfolio",
   "version": "1.0.0",
-  "homepage": "https://andrii-avranmenko.github.io/",
+  "homepage": "https://andriiavr.github.io/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url ./"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andrii-Avramenko/andrii-avramenko.github.io.git"
+    "url": "git+https://github.com/andriiavr/andriiavr.github.io.git"
   },
   "keywords": [],
   "author": "Andrii Avramenko",

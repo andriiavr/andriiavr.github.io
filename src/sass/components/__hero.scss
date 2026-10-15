@@ -61,7 +61,8 @@
 .hero-name {
     margin: 0 auto;
     width: 236px;
-    font-family: $projectsFont;
+    font-family: $projectsFont, sans-serif;
+    text-align: center;
     font-size: 48px;
     line-height: 65px;
     color: #656565;

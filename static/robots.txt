@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andrii-avramenko.github.io/sitemap.xml
+Sitemap: https://andriiavr.github.io/sitemap.xml
