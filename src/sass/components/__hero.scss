@@ -1,74 +1,103 @@
 .hero {
-    height: 568px;
-    background-image: linear-gradient(0deg,rgba(0, 27, 122, 0) 0%, rgba(177, 83, 215, 1) 100%);
+  min-height: 568px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 27, 122, 0) 0%,
+    rgba(177, 83, 215, 1) 100%
+  );
 
-    .container {
-        display: flex;
-        align-items: center;
+  .container {
+    min-height: inherit;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    padding: 50px 20px;
+    gap: 100px;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 50px;
+      gap: 0;
     }
+  }
+}
+
+.hero-picture {
+  width: 300px;
+  height: 300px;
+  img {
+    border-radius: 48px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .hero-card {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 320px;
-    height: 220px;
-    border-radius: 48px;
-    overflow: hidden;
-    text-align: center;
-    background-color: #F0EED9;
-    transform: rotate(-12deg);
+  display: flex;
+  flex-direction: column;
+  // margin: 0 auto;
+  width: 320px;
+  height: 220px;
+  border-radius: 48px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f0eed9;
+  transform: rotate(-12deg);
 
-    @media screen and (min-width: $tablet) {
-        width: 480px;
-        height: 280px;
-        margin-right: 0;
-    }
+  @media screen and (min-width: $desktop) {
+    width: 480px;
+    height: 280px;
+    margin-right: 0;
+  }
 }
 
 .hero-hello {
-    background-color: #FF5A45;
-    width: 100%;
-    padding: 8px 0 2px;
-    font-family: 'Inter';
+  background-color: #ff5a45;
+  width: 100%;
+  padding: 8px 0 2px;
+  font-family: "Inter";
 
-    @media screen and (min-width: $tablet) {
-        padding-top: 12px;
-    }
+  @media screen and (min-width: $desktop) {
+    padding-top: 12px;
+  }
 }
 
 .hero-text {
-    font-size: 36px;
-    line-height: 46px;
+  font-size: 36px;
+  line-height: 46px;
 
-    @media screen and (min-width: $tablet) {
-        font-size: 48px;
-        line-height: 58px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    line-height: 58px;
+  }
 }
 
 .hero-subtext {
-    font-size: 15px;
-    line-height: 19px;
+  font-size: 15px;
+  line-height: 19px;
 
-    @media screen and (min-width: $tablet) {
-        font-size: 20px;
-        line-height: 24px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .hero-name {
-    margin: 0 auto;
-    width: 236px;
-    font-family: $projectsFont, sans-serif;
-    text-align: center;
-    font-size: 48px;
-    line-height: 65px;
-    color: #656565;
+  margin: 0 auto;
+  width: 236px;
+  font-family: $projectsFont, sans-serif;
+  text-align: center;
+  font-size: 48px;
+  line-height: 65px;
+  color: #656565;
 
-    @media screen and (min-width: $tablet) {
-        font-size: 64px;
-        line-height: 81px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+    line-height: 81px;
+  }
 }

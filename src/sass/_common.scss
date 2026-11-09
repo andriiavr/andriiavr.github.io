@@ -9,7 +9,7 @@
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
-    max-width: 668px;
+    max-width: $tablet;
   }
 
   @media screen and (min-width: $desktop) {
@@ -23,6 +23,7 @@ body {
   font-family: $primaryFont;
   font-weight: 700;
   line-height: 1.5;
+  font-display: swap;
   font-size: 48px;
   color: $white-color;
   background-color: #0e21a0;
