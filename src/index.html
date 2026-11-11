@@ -69,22 +69,12 @@
       <div class="container">
         <p class="projects-title">My Biggest Projects</p>
         <div class="project-switch" role="group" aria-label="Project source">
-          <input
-            type="radio"
-            name="project-source"
-            id="source-selected"
-            value="selected"
-            checked
-          />
-          <label for="source-selected">Selected</label>
-
-          <input
-            type="radio"
-            name="project-source"
-            id="source-github"
-            value="github"
-          />
-          <label for="source-github">GitHub</label>
+          <button type="button" data-value="selected">
+            Pre-selected
+          </button>
+          <button type="button" data-value="github">
+            Github
+          </button>
 
           <span class="project-switch-slider" aria-hidden="true"></span>
         </div>

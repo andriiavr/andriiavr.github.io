@@ -1,7 +1,7 @@
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
-import projects from "./projects.json";
+import JSONprojects from "./projects.json";
 import axios from "axios";
 
 const placeholderImage =
@@ -34,7 +34,7 @@ async function fetchRepos() {
 }
 
 function renderProjects(projects) {
-  projectsList.innerHTML = ""
+  projectsList.innerHTML = "";
   projects.forEach((project) => {
     let markup = `<li class="projects-item animate ">
               ${!project.thumbnail ? `` : `<img src="${project.thumbnail}" alt="Project thumbnail" class="projects-thumbnail">`}
@@ -52,6 +52,7 @@ function renderProjects(projects) {
               </ul>
             </li>`;
     projectsList.insertAdjacentHTML("beforeend", markup);
+    projectsList.querySelectorAll(".animate").forEach((el) => observer.observe(el));
   });
 }
 
@@ -66,9 +67,31 @@ const observer = new IntersectionObserver(
   { threshold: 0.3 },
 );
 
+async function handleTypeChange(e) {
+  const btn = e.target.closest("[data-value]");
+  let projects
+  switch (btn.dataset.value) {
+    case "selected":
+      projects = JSONprojects.projects;
+      break
+    case "github":
+      projects = await fetchRepos();
+      break
+    default:
+      break
+  }
+  renderProjects(projects)
+  console.log(projects)
+  console.log(btn.dataset.value);
+}
+
 async function main() {
   const projects2 = await fetchRepos();
-  renderProjects(projects.projects);
+  renderProjects(JSONprojects.projects);
+
+  document
+    .querySelector(".project-switch")
+    .addEventListener("click", handleTypeChange);
   document.querySelectorAll(".animate").forEach((el) => observer.observe(el));
 }
 
