@@ -17,10 +17,7 @@
     />
     <meta property="og:url" content="https://andriiavr.github.io/" />
     <meta property="og:type" content="profile" />
-    <meta
-      property="og:image"
-      content="/src/images/mypicture.webp"
-    />
+    <meta property="og:image" content="/src/images/mypicture.webp" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://andriiavr.github.io/" />
@@ -29,10 +26,7 @@
       property="twitter:description"
       content="A showcase of projects by Andrii Avramenko"
     />
-    <meta
-      property="twitter:image"
-      content="/src/images/mypicture.webp"
-    />
+    <meta property="twitter:image" content="/src/images/mypicture.webp" />
 
     <title>andriiavr — Portfolio</title>
     <link rel="stylesheet" href="./sass/index.scss" />
@@ -48,12 +42,15 @@
     <h1 style="display: none">andriiavr</h1>
     <section class="hero">
       <div class="container">
-        <picture class="hero-picture">
-          <img
-            src="https://avatars.githubusercontent.com/u/162386783?v=4"
-            alt="Picture of me"
-          />
-        </picture>
+        <img
+          src="https://avatars.githubusercontent.com/u/162386783?v=4"
+          alt="Picture of me"
+          onerror="
+            this.onerror = null;
+            this.src = '/images/mypicture.webp';
+          "
+          class="hero-picture"
+        />
         <div class="hero-card">
           <div class="hero-hello">
             <p class="hero-text">Hello</p>
