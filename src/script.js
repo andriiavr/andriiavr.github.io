@@ -1,8 +1,17 @@
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+import Handlebars from "handlebars";
 
 import JSONprojects from "./projects.json";
 import axios from "axios";
+
+import projectTemplate from "./templates/project.hbs";
+Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : arg1;
+});
+Handlebars.registerHelper('join', function(array) {
+  return array.join(" ")
+})
 
 const placeholderImage =
   "https://hips.hearstapps.com/hmg-prod/images/ginger-maine-coon-kitten-running-on-lawn-in-royalty-free-image-1719608142.jpg";
@@ -24,36 +33,29 @@ async function fetchRepos() {
         params: {
           sort: "pushed",
           direction: "desc",
-          per_page: 8,
+          per_page: 9,
         },
       },
     );
+    console.log(response.data)
     const { data } = response;
     return data;
-  } catch (err) {}
+  } catch (err) {
+    return [{ name: "error" }];
+  }
 }
 
 function renderProjects(projects) {
   projectsList.innerHTML = "";
   projects.forEach((project) => {
-    let markup = `<li class="projects-item animate ">
-              ${!project.thumbnail ? `` : `<img src="${project.thumbnail}" alt="Project thumbnail" class="projects-thumbnail">`}
-              <p class="projects-name">${project.name}</p>
-              <p class="projects-time">${new Date(
-                project.pushed_at,
-              ).toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "numeric",
-                year: "numeric",
-              })}</p>
-              <ul class="projects-links">
-                ${!project.homepage ? `` : `<li class="projects-link"><a href="${project.homepage}" target="_blank">Website</a></li>`}
-                <li class="projects-link"><a href="${project.html_url}" target="_blank">Source code</a></li>
-              </ul>
-            </li>`;
+    const date = new Date(project.pushed_at,).toLocaleDateString("en-GB",
+    { day: "2-digit", month: "numeric", year: "numeric", })
+    let markup = projectTemplate({...project, date});
     projectsList.insertAdjacentHTML("beforeend", markup);
-    projectsList.querySelectorAll(".animate").forEach((el) => observer.observe(el));
   });
+  projectsList
+    .querySelectorAll(".animate")
+    .forEach((el) => observer.observe(el));
 }
 
 const observer = new IntersectionObserver(
@@ -69,19 +71,19 @@ const observer = new IntersectionObserver(
 
 async function handleTypeChange(e) {
   const btn = e.target.closest("[data-value]");
-  let projects
+  let projects;
   switch (btn.dataset.value) {
     case "selected":
       projects = JSONprojects.projects;
-      break
+      break;
     case "github":
       projects = await fetchRepos();
-      break
+      break;
     default:
-      break
+      break;
   }
-  renderProjects(projects)
-  console.log(projects)
+  renderProjects(projects);
+  console.log(projects);
   console.log(btn.dataset.value);
 }
 

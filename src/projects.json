@@ -6,7 +6,9 @@
             "thumbnail": "/projects/daily_forecast.png",
             "homepage": "https://andriiavr.github.io/dailyForecast",
             "html_url": "https://github.com/andriiavr/dailyForecast",
-            "tags": ["github"]
+            "topics": [
+                "github"
+            ]
         },
         {
             "name": "Event Booster",
@@ -14,8 +16,9 @@
             "thumbnail": "/projects/event_booster.png",
             "homepage": "https://andriiavr.github.io/events-project",
             "html_url": "https://github.com/andriiavr/events-project",
-            "tags": ["github"]
-            
+            "topics": [
+                "github"
+            ]
         },
         {
             "name": "Coding Magic",
@@ -23,7 +26,9 @@
             "thumbnail": "/projects/coding_magic.png",
             "homepage": "https://andriiavr.github.io/coding-magic",
             "html_url": "https://github.com/andriiavr/coding-magic",
-            "tags": ["github"]
+            "topics": [
+                "github"
+            ]
         },
         {
             "name": "Ice Cream",
@@ -31,7 +36,9 @@
             "thumbnail": "/projects/ice_cream.png",
             "homepage": "https://andriiavr.github.io/ice-cream",
             "html_url": "https://github.com/andriiavr/ice-cream",
-            "tags": ["github"]
+            "topics": [
+                "github"
+            ]
         },
         {
             "name": "Web studio",
@@ -39,16 +46,20 @@
             "thumbnail": "/projects/webstudio.png",
             "homepage": "https://andriiavr.github.io/WebStudio-SCSS",
             "html_url": "https://github.com/andriiavr/WebStudio-SCSS",
-            "tags": ["github"]
+            "topics": [
+                "github"
+            ]
         },
         {
             "name": "York Parks",
-            "lastUpdated": "2025-02-05",
+            "pushed_at": "2025-02-05",
             "thumbnail": "/projects/york_parks.png",
             "homepage": "https://andriiavr.github.io/york-parks",
             "html_url": "https://github.com/andriiavr/york-parks",
-            "tags": ["github"]
-        } 
+            "topics": [
+                "github"
+            ]
+        }
     ],
-    "lastUpdated": "2026-11-09T14:16:30"
+    "lastUpdated": "2026-11-11T23:03:36"
 }

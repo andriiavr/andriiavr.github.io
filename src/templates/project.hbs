@@ -1,0 +1,20 @@
+<li class="projects-item animate {{#if topics}}{{#join topics}}{{/join}}{{/if}}">
+  {{#if thumbnail}}
+    <img
+      src="{{thumbnail}}"
+      alt="Project's thumbnail"
+      class="projects-thumbnail"
+    />
+  {{/if}}
+  <p class="projects-name">
+    {{#ifEquals name "andriiavr.github.io"}}Portfolio{{/ifEquals}}</p>
+  <p class="projects-time">{{date}}</p>
+  <ul class="projects-links">
+    <li class="projects-link"><a href={{html_url}} target="_blank">Source code</a></li>
+    {{#if homepage}}<li class="projects-link"><a
+          href={{homepage}}
+          target="_blank"
+        >Website</a></li>
+    {{/if}}
+  </ul>
+</li>
