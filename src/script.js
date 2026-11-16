@@ -28,7 +28,7 @@ lenis.on("scroll", (e) => {
 async function fetchRepos() {
   try {
     const response = await axios.get(
-      "https://api.github.com/users/andriiavr/repos",
+      "https://andriiavr.vercel.app/api/github",
       {
         params: {
           sort: "pushed",
